@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.christmas-background {
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fcz%2Fsearch%3Fk%3Dchristmas%2Bbackground&psig=AOvVaw0XavZzlxVucDpBPeU7CDHM&ust=1730225602985000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNjcq-bWsYkDFQAAAAAdAAAAABAE'); /* Link to a Christmas-themed image */
+}
+
+.neutral-background {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/042/648/671/small/ai-generated-visual-metaphor-for-regret-lonely-figure-seated-on-a-park-bench-on-a-rainy-night-captured-in-a-moment-of-solitude-amidst-an-illuminated-city-backdrop-photo.jpg'); /* Link to a Christmas-themed image */ /* Light blue color for non-Christmas days */
+}
