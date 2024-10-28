@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const messageElement = document.getElementById("message");
     const today = new Date();
-    const startOfChristmasSeason = new Date(today.getFullYear(), 11, 1); // 1. prosince
+    const startOfChristmasSeason = new Date(today.getFullYear(), 11, 1); // 1. prosince - měsíce začínají od 0
     const endOfChristmasSeason = new Date(today.getFullYear(), 11, 31); // 31. prosince
 
     if (today >= startOfChristmasSeason && today <= endOfChristmasSeason) {
