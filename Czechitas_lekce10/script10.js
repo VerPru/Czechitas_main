@@ -206,4 +206,77 @@ const first = (arr) => {
   console.log(insert([3, 2, 1], 4)); // → true
   console.log(insert([3, 2, 1], 3)); // → false
 
-  
+  //počítání oveček
+
+  // Pole jmen oveček
+const ovciJmena = [
+  "Bětuška",
+  "Čína",
+  "Dolly",
+  "Heidy",
+  "Líza",
+  "Belinda",
+  "Celia",
+  "Elvíra",
+  "Karla",
+  "Otylie",
+  "Škraboška",
+  "Kopretinka",
+  "Berta",
+  "Růženka",
+  "Bobinka",
+  "Žofka",
+  "Dášenka",
+  "Vlnka",
+  "Květuše",
+  "Pampeliška"
+];
+
+// Element na stránce, kam se příběh vloží
+const pribehElement = document.querySelector("#pribeh");
+
+// Generování vět pro prvních 10 oveček
+ovciJmena.slice(0, 10).forEach((jmeno, index) => {
+  const veta = `Ovečka ${jmeno} jako ${index + 1}. přeskočila přes plot. `;
+  pribehElement.innerHTML += veta; // Přidání věty do stránky
+});
+
+//další od Michala
+
+const selectSmiley = (event) => {
+  event.target.classList.add('btn-smiley--selected');
+};
+
+const btns = document.querySelectorAll(".btn-smiley")
+
+btns.forEach(btn => { btn.addEventListener("click", selectSmiley) })
+
+// Jeste kratsi varianta - document.querySelectorAll(".btn-smiley").forEach(btn => { btn.addEventListener("click", selectSmiley) }
+
+//ukol z kodim:
+
+const napoje = [
+  { nazev: 'Pivo', cena: 12, skladem: true },
+  { nazev: 'Rum', cena: 120, skladem: false },
+  { nazev: 'Víno', cena: 85, skladem: true },
+  { nazev: 'Whisky', cena: 450, skladem: true },
+  { nazev: 'Vodka', cena: 280, skladem: false },
+  { nazev: 'Becherovka', cena: 210, skladem: true },
+  { nazev: 'Kofola', cena: 40, skladem: true },
+  { nazev: 'Voda', cena: 15, skladem: false },
+]
+
+// ["Pivo", "Rum", "Vino"]
+
+const pojmenovaniNapoju = napoje.map(polozka => polozka.nazev)
+const pojmenovaniNapoju2 = napoje.map(function(polozka) { // { nazev: 'Pivo', cena: 12, skladem: true }
+  // if(polozka.skladem) {
+  //     return polozka.nazev
+  // } else {
+  //     return "Neni skladem"
+  // }
+
+  return polozka.skladem ? polozka.nazev : "Neni skladem"
+})
+
+console.log(pojmenovaniNapoju)
